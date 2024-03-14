@@ -2,9 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:iquiz/screens/test_page.dart';
 import 'package:iquiz/widgets/category_card.dart';
 
-class CategoriesScreen extends StatelessWidget {
-  const CategoriesScreen({super.key});
+class Quiz extends StatefulWidget {
+  const Quiz({super.key});
 
+  @override
+  State<Quiz> createState() {
+    return _QuizState();
+  }
+}
+
+class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iquiz/screens/categories.dart';
+import 'package:iquiz/screens/quiz.dart';
 
 final theme = ThemeData(
   useMaterial3: true,
@@ -20,7 +20,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      home: CategoriesScreen(),
+      home: Quiz(),
     );
   }
 }
