@@ -9,7 +9,7 @@ class TestPage extends StatelessWidget {
     return PopScope(
       canPop: false,
       onPopInvoked: (bool didPop) async {
-        print('Did Pop $didPop');
+        // print('Did Pop $didPop');
         if (!didPop) {
           final nav = Navigator.of(context);
           final result = await showDialog(
@@ -28,10 +28,10 @@ class TestPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).pop(true);
                   },
-                  child: const Text('Yes'),
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.red[400],
                       foregroundColor: Colors.white),
+                  child: const Text('Yes'),
                 ),
               ],
             ),
@@ -42,11 +42,33 @@ class TestPage extends StatelessWidget {
         }
       },
       child: Scaffold(
+        backgroundColor: Colors.deepPurple,
         appBar: AppBar(
           title: Text('$category Test'),
+          backgroundColor: Colors.deepPurple,
+          foregroundColor: Colors.white,
         ),
         body: Center(
-          child: Text('content for $category'),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                'assets/images/react-logo-1.png',
+                height: 300,
+                width: 300,
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text(
+                  'START QUIZ',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
