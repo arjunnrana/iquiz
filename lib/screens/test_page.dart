@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:iquiz/screens/quiz_screen.dart';
 
 class TestPage extends StatelessWidget {
   const TestPage({super.key, required this.category});
+
   final String category;
 
   @override
@@ -35,7 +37,14 @@ class TestPage extends StatelessWidget {
               height: 50,
             ),
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (contexte) => QuizScreen(),
+                  ),
+                );
+              },
               icon: const Icon(Icons.arrow_right_alt),
               label: const Text(
                 'START QUIZ',
