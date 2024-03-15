@@ -28,7 +28,7 @@ class _QuizState extends State<Quiz> {
         ),
         children: [
           CategoryCard(
-            category: 'ReactJS',
+            category: 'Flutter',
             onTap: (category) {
               Navigator.push(
                   context,

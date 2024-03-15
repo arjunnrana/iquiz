@@ -20,13 +20,13 @@ class CategoryCard extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             color: Color.fromARGB(255, 174, 225, 255),
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(12),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/images/icons8-react-50.png',
+                'assets/images/flutter-logo-1.png',
                 width: 50,
               ),
               SizedBox(
